@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.min.js"></script>
+</head>
+
+<body>
+  <div id="demo01" style="width:600px;height:400px">
+
+  </div>
+  <script>
+    const myChart = echarts.init(document.getElementById('demo01'))
+    option = {
+      title: { // 标题组件，包含主标题和副标题
+        text: '测试标题',
+        padding: [5, 24],
+        subtext: '单位：个', // 副标题
+        itemGap: 20, // 主副标题之间的间距  gap: n. 缺口；分歧；间隔
+      },
+      tooltip: {
+        // trigger: 'axis',
+        axisPointer: {
+          type: 'cross'
+        }
+      },
+      grid: { // 直角系内绘图网格，单个grid内最多可以放置上下俩个x轴和左右俩个y轴
+        top: '18%', // 绘图网格距离容器顶部的距离，默认： '60'（单位不写默认为px）
+        left: '16%', // 绘图网格距离容器左侧的距离，默认： '20%'
+      },
+      xAxis: {
+        axisLine: { // 坐标轴轴线
+          lineStyle: {
+            color: 'rgba(128, 128, 128, 0.6)'
+          }
+        },
+        axisTick: { // 坐标轴刻度相关设置 （这里的刻度自己理解错了）
+          lineStyle: {
+            width: 0
+          }
+        },
+        splitLine: { // 坐标轴在grid区域中的分割线
+          lineStyle: {
+            color: 'rgba(128,128,128,0.2)'
+          }
+        }
+      },
+      yAxis: {
+        axisLine: {
+          lineStyle: {
+            color: 'rgba(128, 128, 128, 0.6)'
+          }
+        },
+        axisTick: {
+          lineStyle: {
+            width: 0
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: 'rgba(128,128,128,0.2)'
+          }
+        }
+      },
+      series: [ // 系列列表。每个系列通过type决定自己的图表类型
+        {
+          symbolSize: 20, // symbol: 象征；标志；符号；记号
+          data: [
+            [10.0, 8.04],
+            [8.0, 6.95],
+            [13.0, 7.58],
+            [9.0, 8.81],
+            [11.0, 8.33],
+            [14.0, 9.96],
+            [6.0, 7.24],
+            [4.0, 4.26],
+            [12.0, 10.84],
+            [7.0, 4.82],
+            [5.0, 5.68]
+          ],
+          type: 'scatter', // 散点图
+        }
+      ]
+    };
+    myChart.setOption(option)
+  </script>
+</body>
+
+</html>
