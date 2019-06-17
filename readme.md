@@ -1,6 +1,6 @@
 ## `echarts`入门篇
 
-### 构建实例
+### 第一个`echarts`图表
 
 ### `echarts`基本组件概念
 一个直角坐标系中`echarts`有如下一些基础组件：  
@@ -15,7 +15,7 @@
 
 这里我将常用的一些属性以图形的方式进行了一个简单整理，方便记忆：  
 ![echarts-basic](./screenshots/echarts-basic.png)
-### 第一个`echarts`图表
+### 绘制一个散点图
 
 预览地址: https://wangkaiwd.github.io/echarts-study/demo/demo01.html
 
