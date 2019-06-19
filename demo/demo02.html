@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="demo02" style="height: 100%;width:100%;">
+
+  </div>
+  <script>
+    var xData = function () {
+      var data = [];
+      for (var i = 1; i < 15; i++) {
+        data.push(i + "");
+      }
+      return data;
+    }();
+    const myChart = echarts.init(document.getElementById('demo02'))
+    const option = {
+      title: {
+        text: '16年1月-16年11月充值客单分析',
+        subtext: 'BY MICVS',
+        textStyle: {
+          color: '#fff',
+          fontSize: 22
+        },
+        subtextStyle: {
+          color: '#90979c',
+          fontSize: 16
+        },
+        left: '4%',
+        top: '2%'
+      },
+      backgroundColor: '#344b58',
+      tooltip: {
+        trigger: "axis", // 结合 type: "shadow"实现了鼠标移入图形，展示阴影效果
+        axisPointer: {
+          type: "shadow",
+          textStyle: {
+            color: "#fff"
+          }
+        },
+      },
+      legend: {
+        top: '10%',
+        textStyle: {
+          color: '#90979c'
+        }
+      },
+      grid: {
+        top: 110
+      },
+      // dataZoom: [
+      //   { type: 'inside' }
+      // ],
+      xAxis: {
+        data: xData,
+        axisTick: {
+          show: false,
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#90979c'
+          }
+        },
+        splitLine: {
+          show: false
+        }
+      },
+      yAxis: {
+        axisTick: {
+          show: false,
+        },
+        axisLine: {
+          lineStyle: {
+            color: '#90979c'
+          }
+        },
+        splitLine: {
+          show: false
+        }
+      },
+      series: [
+        {
+          name: '老用户',
+          type: 'bar',
+          // barGap: '10%',
+          barMaxWidth: 35,
+          data: [
+            198.66,
+            330.81,
+            151.95,
+            160.12,
+            222.56,
+            229.05,
+            128.53,
+            250.91,
+            224.47,
+            473.99,
+            126.85,
+            260.50
+          ],
+          stack: '总量',
+          label: {
+            show: true,
+            position: 'insideTop'
+          },
+          itemStyle: {
+            color: 'rgba(255,144,128,1)'
+          }
+        },
+        {
+          name: '新用户',
+          type: 'bar',
+          data: [
+            82.89,
+            67.54,
+            62.07,
+            59.43,
+            67.02,
+            67.09,
+            35.66,
+            71.78,
+            81.61,
+            78.85,
+            79.12,
+            72.30
+          ],
+          stack: '总量',
+          label: {
+            show: true,
+            position: 'top'
+          },
+          itemStyle: {
+            color: 'rgba(0,191,183,1)'
+          },
+        },
+        {
+          name: '总',
+          type: 'line',
+          data: [
+            281.55,
+            398.35,
+            214.02,
+            219.55,
+            289.57,
+            296.14,
+            164.18,
+            322.69,
+            306.08,
+            552.84,
+            205.97,
+            332.79
+          ],
+          label: {
+            show: true,
+            position: 'top'
+          },
+          symbolSize: 20,
+          stack: '总量',
+          itemStyle: {
+            color: 'rgba(252,230,48,1)'
+          },
+          symbol: 'circle' // 默认是空心圆
+        }
+      ]
+    }
+    myChart.setOption(option)
+    window.addEventListener('resize', () => myChart.resize())
+
+    // 目前问题： 1. 一些细节样式的调整  2. data为什么要这样来写
+    // 总结新知识点
+  </script>
+</body>
+
+</html>
