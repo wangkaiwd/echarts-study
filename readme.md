@@ -6,6 +6,7 @@
 
 由于操作1无法获取到列表，所以只能暂时使用操作2获得提示
 ### 安装
+
 ### 使用
 * 修改主题
 * [cheat sheet](https://echarts.apache.org/en/cheat-sheet.html)
@@ -18,3 +19,4 @@
   1. copy mobile taobao meta viewport code
   2. use native js obtain mobile screen width
   3. Media Query : `baseOption` + `media`
+* parcel setup vue/react/native js project
