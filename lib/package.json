@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/echarts": "^4.6.3",
     "parcel": "^2.0.0-beta.1"
   },
   "dependencies": {
