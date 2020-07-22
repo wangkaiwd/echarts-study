@@ -8,3 +8,9 @@
 ### 安装
 ### 使用
 * 修改主题
+* [cheat sheet](https://echarts.apache.org/en/cheat-sheet.html)
+* [Loading and Updating of Asynchronous Data](https://echarts.apache.org/en/tutorial.html#Loading%20and%20Updating%20of%20Asynchronous%20Data)
+  * `Loading Animation`
+  * How to ensure complete current http request before next http request (boolean variable)
+  * [tutorial-dynamic-data](https://echarts.apache.org/examples/zh/editor.html?c=doc-example/tutorial-dynamic-data)
+* [Events and Actions in Echarts](https://echarts.apache.org/en/tutorial.html#Events%20and%20Actions%20in%20ECharts)
