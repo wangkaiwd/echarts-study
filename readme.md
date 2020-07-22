@@ -14,3 +14,7 @@
   * How to ensure complete current http request before next http request (boolean variable)
   * [tutorial-dynamic-data](https://echarts.apache.org/examples/zh/editor.html?c=doc-example/tutorial-dynamic-data)
 * [Events and Actions in Echarts](https://echarts.apache.org/en/tutorial.html#Events%20and%20Actions%20in%20ECharts)
+* [Responsive Mobile-End](https://echarts.apache.org/en/tutorial.html#Responsive%20Mobile-End)
+  1. copy mobile taobao meta viewport code
+  2. use native js obtain mobile screen width
+  3. Media Query : `baseOption` + `media`
